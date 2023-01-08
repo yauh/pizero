@@ -16,3 +16,21 @@ Copy `scanner.py`, font and `drive` folder to the raspberry pi. Install Python 3
 the program must run as root, i.e.
 
 `$ sudo python scanner.py`
+
+## BME680
+
+In order to get the environmental sensor BME680 running do the following:
+
+```
+raspi-config nonint do_i2c 0
+apt install -y python3-smbus i2c-tools
+```
+
+Connect with 4 wires, using I2C
+
+| Raspberry Pi GPIO | BME280 | Color |
+| --- | --- | --- |
+| 1 (3v3 power) | VCC | black |
+| 6 (Ground) | GND | brown |
+| 5 (GPIO3 / SCL) | SCL | red |
+| 3 (GPIO2 / SDA) | SDA | orange |
