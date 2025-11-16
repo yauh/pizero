@@ -24,6 +24,9 @@ In order to get the environmental sensor BME680 running do the following:
 ```
 raspi-config nonint do_i2c 0
 apt install -y python3-smbus i2c-tools
+apt install python3-pip -y
+pip3 install --user adafruit-circuitpython-bme680
+pip3 install --user paho-mqtt
 ```
 
 Connect with 4 wires, using I2C
